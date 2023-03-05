@@ -5,9 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://icons8.com/icon/nkGDoqzPxYM3/calendar">
-    <title>Weeker</title>
+    <title>Week-Bot</title>
 </head>
 <body>
-    <center><h1>It's a <%= KindOfDay %> and so it is a <%= TheDay %>!!</h1></center>
+    <!-- <center><h1>It's a <%= KindOfDay %> and so it is a <%= TheDay %>!!</h1></center> -->
+
+    <!-- Weekend -->
+    <% if(KindOfDay=="Saturday" || KindOfDay=="Sunday"){ %>
+        <center>
+            <h1 style="color:aqua">
+                <%= KindOfDay %> 
+                    To-Do List 
+            </h1>
+        </center> 
+    <% } else{ %>
+        <center>
+            <h1 style="color:darkorange">
+                <!-- This will give output so we will use different tag -->
+                <%= KindOfDay %>  
+                    To-Do List
+            </h1>
+        </center>
+    <% } %>
+
+    <script src="../app.js"></script>
+
 </body>
 </html>
